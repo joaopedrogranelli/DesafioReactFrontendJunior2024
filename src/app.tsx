@@ -1,9 +1,10 @@
-import React from "react";
+import styles from "./styles.module.css";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
-    <section>
-      <h1>Todos</h1>
+    <section className={styles.sectionContainer}>
+      <Outlet />
     </section>
   );
 }

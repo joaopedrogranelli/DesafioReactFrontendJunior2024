@@ -1,0 +1,236 @@
+body,
+button,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f5f5;
+  color: #111;
+  font: 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin: 0 auto;
+  max-width: 550px;
+  min-width: 230px;
+}
+
+.sectionContainer {
+  justify-content: center;
+  margin: 130px 0 40px;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sectionContainer h1 {
+  color: #b83f45;
+  font-size: 80px;
+  font-weight: 200;
+  position: absolute;
+  text-align: center;
+  top: -140px;
+  width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  background: rgb(255, 255, 255);
+  border: none;
+  box-sizing: border-box;
+  height: 65px;
+  width: 100%;
+  padding: 16px 16px 16px 60px;
+  font-size: 24px;
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.input:focus {
+  box-shadow: 0 0 2px 2px #cf7d7d;
+  outline: 0;
+}
+
+.main {
+  background: #fff;
+  border-top: 1px solid #e6e6e6;
+  position: relative;
+  z-index: 2;
+}
+
+.todoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todoList li {
+  border-bottom: 1px solid #ededed;
+  font-size: 24px;
+  position: relative;
+}
+
+.toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  bottom: 0;
+  height: auto;
+  margin: auto 0;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 40px;
+}
+
+.todoList li .toggle + label {
+  padding-right: 40px;
+  background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23949494%22%20stroke-width%3D%223%22/%3E%3C/svg%3E);
+  background-position: 0;
+  background-repeat: no-repeat;
+}
+
+.todoList li .toggle:checked + label {
+  background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%2359A193%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20fill%3D%22%233EA390%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.toggle-all:focus + label,
+.toggle:focus + label,
+:focus {
+  box-shadow: 0 0 2px 2px #cf7d7d;
+  outline: 0;
+}
+
+.todoList li.completed label {
+  color: #949494;
+  text-decoration: line-through;
+}
+
+.label {
+  color: #484848;
+  display: block;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 15px 15px 15px 60px;
+  transition: color 0.4s;
+  word-break: break-all;
+}
+
+.todoList:hover .destroy {
+  display: inline;
+}
+
+.destroy {
+  bottom: 0;
+  color: #949494;
+  background: none;
+  border: none;
+  display: none;
+  font-size: 30px;
+  height: 40px;
+  margin: auto 0;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  transition: color 0.2s ease-out;
+  width: 40px;
+}
+
+.destroy:after {
+  content: "×";
+  display: block;
+  height: 100%;
+  line-height: 1.1;
+}
+
+.destroy:hover {
+  color: #c18585;
+}
+
+.footer {
+  background: #fff;
+  border-top: 1px solid #e6e6e6;
+  font-size: 15px;
+  height: 20px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.footer:before {
+  bottom: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,
+    0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6,
+    0 17px 2px -6px rgba(0, 0, 0, 0.2);
+  content: "";
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+}
+
+.todoCount {
+  float: left;
+  text-align: left;
+}
+
+.filters {
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+
+.filters li {
+  display: inline;
+}
+
+.filters li a {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+}
+
+.filters li a:hover {
+  border-color: #ce4646;
+}
+
+.clearCompleted {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.clearCompleted,
+.clearCompleted:active {
+  cursor: pointer;
+  float: right;
+  line-height: 19px;
+  font-size: 15px;
+  position: relative;
+  text-decoration: none;
+}
+
+.lucide {
+  position: absolute;
+  width: 45px;
+  height: 30px;
+  color: rgb(118, 118, 118);
+  stroke-width: 1.9px;
+}
